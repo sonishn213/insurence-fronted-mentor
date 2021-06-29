@@ -1,0 +1,53 @@
+.textgrids {
+  position: relative;
+  text-align: center;
+  margin-top: 138px;
+  @media screen and(min-width:700px) {
+    text-align: left;
+    margin-top: 300px;
+  }
+  &__boxes-wraper {
+    margin-top: 86px;
+    @media screen and(min-width:700px) {
+      display: flex;
+      align-items: flex-start;
+    }
+    & .box:not(:last-child) {
+      margin-bottom: 58px;
+      @media screen and(min-width:700px) {
+        margin-bottom: 0;
+        margin-right: 30px;
+      }
+    }
+    & .box {
+      &__heading {
+        margin-bottom: 24px;
+        font-size: 28px;
+        font-weight: 500;
+      }
+      &__para {
+        color: $dark-grayish-violet;
+        line-height: 1.5;
+      }
+      & img {
+        margin-bottom: 40px;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    height: 2px;
+    width: 150px;
+    background-color: hsl(291, 8%, 67%);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    margin-bottom: 46px;
+    @media screen and(min-width:700px) {
+      left: 0;
+      transform: translateX(0);
+    }
+  }
+}

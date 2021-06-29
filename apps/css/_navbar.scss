@@ -1,0 +1,129 @@
+.navbar-header {
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  z-index: 5;
+  top: 0;
+  .nav {
+    padding: 1.5rem 1.5rem;
+    @media screen and (max-width: 699px) {
+      padding: 1.25rem 1.5rem;
+    }
+    text-transform: uppercase;
+    &__logo {
+      display: inline-block;
+      height: 1.125rem;
+    }
+    .nav-links {
+      font-size: 14px;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+      @media screen and (max-width: 699px) {
+        display: none;
+      }
+
+      & a {
+        display: inline-block;
+        text-decoration: none;
+        color: $dark-grayish-violet;
+      }
+      & a:not(:last-child) {
+        &:hover {
+          color: $very-dark-violet;
+        }
+        margin-right: 28px;
+      }
+      & .button {
+        color: $very-dark-violet;
+        border: 2px solid $very-dark-violet;
+      }
+      .button:hover {
+        background-color: $very-dark-violet;
+        color: $very-light-gray;
+      }
+    }
+
+    &__menu-button {
+      display: inline-block;
+      @media screen and (min-width: 700px) {
+        display: none;
+      }
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      .lines {
+        transition: transform 0.2s ease-in-out;
+      }
+      .line1 {
+        transform-origin: top left;
+        transform-box: fill-box;
+        transition: transform 0.2s ease-in-out;
+      }
+      .line2 {
+        opacity: 1;
+        transition: opacity 300ms ease-in-out;
+      }
+      .line3 {
+        transform-origin: bottom left;
+        transform-box: fill-box;
+        transition: transform 0.2s ease-in-out;
+      }
+      &.open {
+        .line1 {
+          transform: rotateZ(40deg);
+        }
+        .line2 {
+          opacity: 0;
+        }
+        .line3 {
+          transform: rotateZ(-40deg);
+        }
+
+        .lines {
+          transform: translateX(7%);
+        }
+      }
+    }
+  }
+  //mobile menu design
+}
+.mobile-menu {
+  position: absolute;
+  margin-top: -100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: $very-dark-violet;
+  color: $very-light-gray;
+  height: 100vh;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  z-index: 3;
+  transition: all 0.7s ease-in-out;
+  & span:first-child {
+    padding-top: 135px;
+  }
+  > span {
+    display: block;
+    margin-bottom: 53px;
+  }
+  & .button {
+    padding: 18px 100px;
+  }
+  & .bg-pattern {
+    position: absolute;
+    top: 60%;
+    left: 0;
+    z-index: 4;
+    width: 0;
+    height: 40%;
+    background-image: url(../../images/bg-pattern-mobile-nav.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    transition: all 0.7s ease-in-out;
+    transition-delay: 0.7s;
+  }
+}

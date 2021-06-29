@@ -1,0 +1,37 @@
+.work-contents {
+  background-color: $dark-violet;
+  text-align: center;
+  padding: 70px 0;
+  line-height: 1.1;
+  max-width: 1110px;
+  margin: 142px 0;
+  background-image: url(../../images/bg-pattern-how-we-work-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  .heading {
+    color: $very-light-gray !important;
+    font-weight: 400;
+    font-size: 36px;
+    margin-bottom: 46px;
+  }
+  .button {
+    font-size: 0.9753rem;
+  }
+  @media screen and(min-width:700px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 82px;
+    background-image: url(../../images/bg-pattern-how-we-work-desktop.svg);
+    background-size: contain;
+    & > div {
+      text-align: right;
+    }
+    .heading {
+      width: 54%;
+      text-align: left;
+      font-size: 55px;
+      margin: 0;
+    }
+  }
+}
